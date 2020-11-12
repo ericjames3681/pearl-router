@@ -4,8 +4,7 @@ import LogIn from "./Pages/LogIn";
 import Profile from "./Pages/Profile";
 import CreateAccount from "./Pages/CreateAccount";
 import Events from "./Pages/Events";
-import { Image } from "semantic-ui-react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import "./App.css";
 
@@ -29,16 +28,32 @@ function App() {
 const Home = () => {
   return (
     <div>
-      <div>
-        <Image src="./jarett-lopez-vD9jjh0sGxY-unsplash.jpg" alt="" />
+      <div className="intro-banner">
+        <div className="banner-text-area">
+          <h1 className="heading-2">
+            Events Done
+            <span>
+              <em className="text-color-white"> Right!</em>
+            </span>
+          </h1>
+          <p className="paragraph-2">
+            Pearl's Office is designed to help event managers and riders have a
+            great experience from start to finish.
+          </p>
+          <Link to="/create-account">
+            <button className="nav-btn-1">
+              <strong>Create Account</strong>
+            </button>
+          </Link>
+        </div>
       </div>
       <span>
         Photo by{" "}
-        <a href="https://unsplash.com/@jarettlopez?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
-          Jarett Lopez
+        <a href="https://unsplash.com/@malgonia_bujalsky?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
+          Malgorzata Bujalska
         </a>{" "}
         on{" "}
-        <a href="https://unsplash.com/s/photos/horse-dressage?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
+        <a href="https://unsplash.com/s/photos/horse-event?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
           Unsplash
         </a>
       </span>
