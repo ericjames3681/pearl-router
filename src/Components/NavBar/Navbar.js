@@ -11,7 +11,9 @@ const Navbar = () => {
           src="./illustratorPEARLBnav.png"
           alt=""
         />
-        <h3 className="text-block">Pearl's Office</h3>
+        <Link className="link-style" to="/">
+          <h3 className="text-block">Pearl's Office</h3>
+        </Link>
       </div>
 
       <div className="user-nav w-inline-block">
@@ -26,11 +28,11 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="nav-right">
-        <Link className="link-style" to="/profile">
-          <button>Make "Create Account"</button>
+        <Link className="link-style" to="/create-account">
+          <button className="nav-btn-1">Make "Create Account"</button>
         </Link>
         <Link className="link-style" to="/login">
-          <button>Log In</button>
+          <button className="nav-btn-2">Log In</button>
         </Link>
       </div>
     </nav>
