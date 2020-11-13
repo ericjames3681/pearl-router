@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "jdoe@test.com",
+    "phone": null,
+    "address": null,
+    "dob": null,
+    "role": null,
+    "profileImgUrl": null,
+    "socialMedia": null,
+    "admin": null,
+    "createdAt": "2020-11-09T21:14:44.486Z",
+    "updatedAt": "2020-11-09T21:14:44.486Z",
+    "UserAssociations": [
+      {
+        "id": 1,
+        "identifier": "1234",
+        "createdAt": "2020-11-09T21:14:44.487Z",
+        "updatedAt": "2020-11-09T21:14:44.487Z",
+        "AssociationId": 1,
+        "UserId": 1,
+        "Association": {
+          "id": 1,
+          "name": "Test Association For Random Horse Owners",
+          "abbreviation": "TAFRHO",
+          "createdAt": "2020-11-09T21:14:44.485Z",
+          "updatedAt": "2020-11-09T21:14:44.485Z"
+        }
+      }
+    ]
+  }
+]

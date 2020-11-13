@@ -4,7 +4,6 @@ import ProfileHeader from "./ProfileHeader";
 import { Container, Button, Menu } from "semantic-ui-react";
 import AboutMe from "./AboutMe";
 import Horses from "./Horses";
-
 import "./ProfileContent.scss";
 
 class Profile extends Component {
