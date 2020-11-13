@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Card, Container } from "semantic-ui-react";
+import { Card, Container, Button } from "semantic-ui-react";
+import EditModal from "./EditModal";
+
+//profileSlice instead of HOOKS?
 
 const AboutMe = () => {
   const [data, setData] = useState([]);
@@ -26,12 +29,15 @@ const AboutMe = () => {
       <br />
       {data &&
         data.length > 0 &&
-        data.map((item) => (
+        data.map((item, idx) => (
           <>
             <h2 style={{ textAlign: "left" }}>Rider Profile</h2>
-            <Card fluid>
+            <Card key={idx} fluid className="card">
               <Container className="profile-container">
-                <h1 style={{ textAlign: "left" }}>About Me</h1>
+                <h1 style={{ textAlign: "left" }}>
+                  About Me
+                  <EditModal fluid />
+                </h1>
 
                 <h3 style={{ textAlign: "left" }}>First Name</h3>
                 <Card.Content style={{ textAlign: "left" }}>
@@ -63,7 +69,7 @@ const AboutMe = () => {
               </Container>
             </Card>
             <br />
-            <Card fluid>
+            {/* <Card fluid>
               <Container className="profile-container">
                 <h1 style={{ textAlign: "left" }}>Connect Profiles</h1>
 
@@ -93,7 +99,7 @@ const AboutMe = () => {
                   {item.socialMedia}
                 </Card.Content>
               </Container>
-            </Card>
+            </Card> */}
           </>
         ))}
     </div>

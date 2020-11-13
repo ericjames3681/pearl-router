@@ -84,3 +84,21 @@ event-nav-button.w--current {
   margin: 0 0 23px 0;
   padding: 20px 20px 12px 20px;
 }
+.card {
+  margin-bottom: 23px;
+  padding: 20px 20px 12px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #dadada;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.profile-image {
+  width: 160px;
+  height: 160px;
+  border-radius: 90px;
+  background-color: #fff;
+  background-image: url(https://assets.website-files.com/5f7b31b…/5fa5767…_philippe-oursel-pgw6cR_wQ8s-unsplash.jpg);
+  background-position: 0px 0px;
+  background-size: cover;
+}

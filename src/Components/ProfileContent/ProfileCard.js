@@ -20,7 +20,7 @@ class Profile extends Component {
           <ProfileHeader />
           <br />
           <Container>
-            <Menu widths={2}>
+            <Menu className="event-nav" widths={2}>
               <Menu.Item
                 name="rider-profile"
                 active={activeItem === "rider-profile"}
