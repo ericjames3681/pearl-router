@@ -18,6 +18,16 @@ nav {
   align-items: center;
   list-style: none;
 }
+.header-text {
+  font-family: "PT Serif", serif;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 38px;
+  line-height: 44px;
+  font-weight: 900;
+}
+
 .test {
   color: red;
 }

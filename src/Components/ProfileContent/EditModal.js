@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Icon, Image, Modal } from "semantic-ui-react";
-import ProfileForm from "../ProfileForm/ProfileForm";
+import LogInCard from "../LogInCard/LogInCard";
 
 function EditModal() {
   const [open, setOpen] = React.useState(false);
@@ -18,7 +18,7 @@ function EditModal() {
     >
       <Modal.Header>Edit Profile</Modal.Header>
       <Modal.Content>
-        <ProfileForm />
+        <LogInCard />
       </Modal.Content>
       <Modal.Actions>
         <Button color="red" onClick={() => setOpen(false)}>

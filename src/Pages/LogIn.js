@@ -1,16 +1,12 @@
 import React from "react";
-import { Container, Card } from "semantic-ui-react";
+import { Container, Image } from "semantic-ui-react";
 import "../App.css";
-import ProfileForm from "../Components/ProfileForm/ProfileForm";
+import LogInCard from "../Components/LogInCard/LogInCard";
 
 const LogIn = () => {
   return (
     <div>
-      <Container>
-        <Card>
-          <ProfileForm />
-        </Card>
-      </Container>
+      <LogInCard />
     </div>
   );
 };
