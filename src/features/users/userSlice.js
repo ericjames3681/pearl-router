@@ -1,11 +1,18 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import { client } from '../../api/client'
 
-const initialState = []
+const initialState = {}
+
+
 
 export const fetchUsers = createAsyncThunk('users/fetchUsers', async () => {
   const response = await client.get('users')
   return response.users
+})
+
+export const fetchUser = createAsyncThunk('users/fetchUser', async (userId, data) => {
+  const response = await client.get(`users/${userId}`, data)
+  return response
 })
 
 export const createUser = createAsyncThunk('users/createUser', async (data) => {
@@ -13,10 +20,19 @@ export const createUser = createAsyncThunk('users/createUser', async (data) => {
   return response
 })
 
+export const updateUser = createAsyncThunk('users/createUser', async (userId, data) => {
+  const response = await client.put(`users/${userId}`, data)
+  return response
+})
+
+
+
 const usersSlice = createSlice({
   name: 'users',
   initialState,
-  reducers: {},
+  reducers: {
+
+  },
   extraReducers: {
     [fetchUsers.pending]: (state, action) => {
       state.status = 'loading'
@@ -33,15 +49,11 @@ const usersSlice = createSlice({
     },
     [createUser.fulfilled]: (state, action) => {
       state.status = 'succeeded'
-      // Add any fetched posts to the array
       state.user = action.payload
     },
     [createUser.rejected]: (state, action) => {
       state.status = 'failed'
       state.error = action.payload
-    },
-    [addNewPost.fulfilled]: (state, action) => {
-      state.posts.push(action.payload)
     },
   },
 })

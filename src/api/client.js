@@ -1,7 +1,7 @@
 // A tiny wrapper around fetch(), borrowed from
 // https://kentcdodds.com/blog/replace-axios-with-a-simple-custom-fetch-wrapper
 
-const BASE_API_URL = 'http://localhost:3000/api/v1/'
+const BASE_API_URL = 'https://pearl-server-master-no7t7ylnnq.herokuapp.com/api/v1/'
 
 export async function client(endpoint, { body, ...customConfig } = {}) {
   const headers = { 'Content-Type': 'application/json' }

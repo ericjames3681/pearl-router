@@ -15,9 +15,9 @@ export const CreateUserForm = () => {
       <h2>Create A New User</h2>
       <Formik
         initialValues={{
+          firstName: "",
+          lastName: "",
           email: "",
-          password: "",
-          passwordConfirmation: "",
         }}
         validate={(values) => {
           const errors = {};
