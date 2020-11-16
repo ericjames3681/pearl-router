@@ -6,7 +6,6 @@ import { Formik, Field, Form } from "formik";
 import { createUser } from "./userSlice";
 
 export const CreateUserForm = () => {
-
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user);
 
@@ -49,13 +48,28 @@ export const CreateUserForm = () => {
         }) => (
           <Form onSubmit={handleSubmit}>
             <label htmlFor="email">Email</label>
-            <Field id="email" name="email" type="email" placeholder="sample@test.com" />
+            <Field
+              id="email"
+              name="email"
+              type="email"
+              placeholder="sample@test.com"
+            />
 
             <label htmlFor="password">Password</label>
-            <Field id="password" name="password" type="password" placeholder="" />
+            <Field
+              id="password"
+              name="password"
+              type="password"
+              placeholder=""
+            />
 
             <label htmlFor="passwordConfirmation">Password</label>
-            <Field id="passwordConfirmation" name="passwordConfirmation" type="password" placeholder="" />
+            <Field
+              id="passwordConfirmation"
+              name="passwordConfirmation"
+              type="password"
+              placeholder=""
+            />
 
             {errors.password && touched.password && errors.password}
             <button type="submit" disabled={isSubmitting}>
@@ -64,6 +78,7 @@ export const CreateUserForm = () => {
           </Form>
         )}
       </Formik>
+      z
     </section>
   );
 };

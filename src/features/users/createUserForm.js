@@ -5,8 +5,7 @@ import { Formik, Field, Form } from "formik";
 
 import { createUser } from "./userSlice";
 
-export const CreateUserForm = () => {
-
+const CreateUserForm = () => {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user);
 
@@ -28,10 +27,11 @@ export const CreateUserForm = () => {
           ) {
             errors.email = "Invalid email address";
           }
+
           return errors;
         }}
         onSubmit={(values, { setSubmitting }) => {
-          createUser(values);
+          dispatch(createUser(values));
 
           //check state for "status == false"
           setSubmitting(false);
@@ -49,13 +49,29 @@ export const CreateUserForm = () => {
         }) => (
           <Form onSubmit={handleSubmit}>
             <label htmlFor="email">Email</label>
-            <Field id="email" name="email" type="email" placeholder="sample@test.com" />
+            <Field
+              id="email"
+              name="email"
+              type="email"
+              placeholder="sample@test.com"
+            />
 
+            <br />
             <label htmlFor="password">Password</label>
-            <Field id="password" name="password" type="password" placeholder="" />
-
-            <label htmlFor="passwordConfirmation">Password</label>
-            <Field id="passwordConfirmation" name="passwordConfirmation" type="password" placeholder="" />
+            <Field
+              id="password"
+              name="password"
+              type="password"
+              placeholder="password"
+            />
+            <br />
+            <label htmlFor="passwordConfirmation">Confirm Password</label>
+            <Field
+              id="passwordConfirmation"
+              name="passwordConfirmation"
+              type="password"
+              placeholder="password"
+            />
 
             {errors.password && touched.password && errors.password}
             <button type="submit" disabled={isSubmitting}>
@@ -67,3 +83,5 @@ export const CreateUserForm = () => {
     </section>
   );
 };
+
+export default CreateUserForm;

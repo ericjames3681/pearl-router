@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Form, Grid, Image, Header, Icon } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import { Formik } from "formik";
-import PearlDialogueLogin from "./PearlDialogueLogin";
+import PearlDialogueLogin from "../../features/users/PearlDialogueLogin";
 
 const LogInCard = () => {
   return (
@@ -39,20 +39,22 @@ const LogInCard = () => {
         }) => (
           <Grid
             textAlign="center"
-            style={{ height: "100vh" }}
+            style={{ height: "120vh" }}
             verticalAlign="middle"
           >
-            <Grid.Column style={{ maxWidth: 450 }}>
+            <Grid.Column style={{ maxWidth: 355 }}>
               <Image
                 centered
                 fluid
                 size="small"
                 src="./illustratorPEARLB.png"
               />
+              <br />
               <PearlDialogueLogin />
               <br />
+
               <Form onSubmit={handleSubmit}>
-                <Header floated="left">Email</Header>
+                <Header floated="left">Email Address</Header>
                 <Form.Input
                   style={{ height: 50 }}
                   iconPosition="left"
@@ -83,7 +85,7 @@ const LogInCard = () => {
                   <input style={{ borderRadius: 10 }} />
                 </Form.Input>
                 {errors.password && touched.password && errors.password}
-
+                <br />
                 <Button
                   style={{
                     backgroundColor: "#FFA2E3",
@@ -98,8 +100,9 @@ const LogInCard = () => {
                   Submit
                 </Button>
               </Form>
+
               <br />
-              <div>
+              <div className="text-color">
                 New to us?{" "}
                 <Link to="./create-account" className="text-color">
                   Sign Up
